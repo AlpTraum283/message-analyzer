@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="core" />
+        <module name="utils" />
+        <module name="message-analyzer" />
+        <module name="dto" />
+        <module name="core-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="core" target="11" />
+      <module name="core-api" target="1.5" />
+      <module name="dependency-management-bom" target="11" />
+      <module name="dto" target="1.5" />
+      <module name="message-analyzer" target="11" />
+      <module name="utils" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
