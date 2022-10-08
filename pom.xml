@@ -6,21 +6,22 @@
 
 
     <parent>
-        <artifactId>common</artifactId>
         <groupId>liga.medical</groupId>
+        <artifactId>common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
 
     <artifactId>message-analyzer</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
-    <module>dependency-management-bom</module>
-    <module>core</module>
-    <module>core-api</module>
-    <module>dto</module>
-    <module>utils</module>
+        <module>dependency-management-bom</module>
+        <module>core</module>
+        <module>core-api</module>
+        <module>dto</module>
+        <module>utils</module>
     </modules>
 
     <dependencies>

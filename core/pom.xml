@@ -11,30 +11,37 @@
         <relativePath>../dependency-management-bom/pom.xml</relativePath>
     </parent>
 
-    <artifactId>message-analyzer-core</artifactId>
+    <artifactId>analyzer-core</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
 
         <dependency>
             <groupId>liga.medical</groupId>
             <artifactId>common-services</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>liga.medical</groupId>
+            <artifactId>analyzer-core-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>liga.medical</groupId>
+            <artifactId>analyzer-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>liga.medical</groupId>
+            <artifactId>analyzer-dto</artifactId>
+        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

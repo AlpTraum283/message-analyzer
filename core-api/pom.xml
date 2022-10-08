@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-<taglib xmlns="http://java.sun.com/xml/ns/javaee"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
-        version="2.1">
+    <parent>
+        <groupId>liga.medical</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>dependency-management-bom</artifactId>
+        <relativePath>../dependency-management-bom/pom.xml</relativePath>
+    </parent>
 
-    <tlib-version>1.0</tlib-version>
-    <short-name>myshortname</short-name>
-    <uri>http://mycompany.com</uri>
+    <artifactId>analyzer-core-api</artifactId>
+    <packaging>jar</packaging>
 
-    <!-- Invoke 'Generate' action to add tags or functions -->
-
-</taglib>
+    <dependencies>
+        <dependency>
+            <groupId>liga.medical</groupId>
+            <artifactId>analyzer-dto</artifactId>
+        </dependency>
+    </dependencies>
+</project>
