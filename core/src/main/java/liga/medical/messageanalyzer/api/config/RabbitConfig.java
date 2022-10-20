@@ -1,6 +1,5 @@
 package liga.medical.messageanalyzer.api.config;
 
-
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
@@ -32,6 +31,4 @@ public class RabbitConfig {
     public Queue commonMonitoring() {
         return new Queue(COMMON_MONITORING_QUEUE);
     }
-
-
 }

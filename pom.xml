@@ -39,7 +39,7 @@
                 <executions>
                     <execution>
                         <id>checkstyle-validate-sources</id>
-                        <phase>deploy</phase>
+                        <phase>none</phase>
                     </execution>
                 </executions>
             </plugin>
