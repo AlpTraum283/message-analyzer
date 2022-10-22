@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 @Configuration
 public class RabbitConfig {
-    private static final String LOCALHOST = "localhost";
+    private static final String LOCALHOST = "e334e8bbd3e1";
     private static final String COMMON_MONITORING_QUEUE = "common_monitoring";
 
     Logger logger = Logger.getLogger(String.valueOf(RabbitConfig.class));
