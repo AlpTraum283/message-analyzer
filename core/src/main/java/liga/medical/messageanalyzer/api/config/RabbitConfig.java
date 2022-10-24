@@ -14,7 +14,7 @@ public class RabbitConfig {
     @Value("${spring.rabbitmq.host}")
     private String localhost;
 
-    @Value("${spring.rabbitmq.queue2}")
+    @Value("${spring.rabbitmq.queue}")
     private String queue;
 
     @Value("${spring.rabbitmq.username}")
