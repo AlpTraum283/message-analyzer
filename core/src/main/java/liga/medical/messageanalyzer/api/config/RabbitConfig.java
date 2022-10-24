@@ -5,21 +5,30 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.logging.Logger;
-
 @Configuration
 public class RabbitConfig {
-    private static final String LOCALHOST = "172.10.0.1";
-    private static final String COMMON_MONITORING_QUEUE = "common_monitoring";
+    @Value("${spring.rabbitmq.host}")
+    private static String LOCALHOST;
 
-    Logger logger = Logger.getLogger(String.valueOf(RabbitConfig.class));
+    @Value("${spring.rabbitmq.queue}")
+    private static String COMMON_MONITORING_QUEUE;
+
+    @Value("${spring.rabbitmq.username}")
+    private static String username;
+
+    @Value("${spring.rabbitmq.password}")
+    private static String password;
 
     @Bean
     public ConnectionFactory connectionFactory() {
-        return new CachingConnectionFactory(LOCALHOST);
+        CachingConnectionFactory cachingConnectionFactory = new CachingConnectionFactory(LOCALHOST);
+        cachingConnectionFactory.setUsername(username);
+        cachingConnectionFactory.setPassword(password);
+        return cachingConnectionFactory;
     }
 
     @Bean
