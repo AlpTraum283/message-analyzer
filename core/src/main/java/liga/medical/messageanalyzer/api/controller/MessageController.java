@@ -18,7 +18,7 @@ public class MessageController {
     AmqpTemplate template;
 
     @PostMapping("/analyze")
-    void queue1(@RequestBody JsonNode body) {
+    public void queue1(@RequestBody JsonNode body) {
         logger.info("passing to common_monitoring");
         template.convertAndSend("common_monitoring", body);
     }
