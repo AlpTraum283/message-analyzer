@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
     @Value("${spring.rabbitmq.host}")
-    private String LOCALHOST;
+    private String localhost;
 
-    @Value("${spring.rabbitmq.queue}")
-    private String COMMON_MONITORING_QUEUE;
+    @Value("${spring.rabbitmq.queue2}")
+    private String queue;
 
     @Value("${spring.rabbitmq.username}")
     private String username;
@@ -25,7 +25,7 @@ public class RabbitConfig {
 
     @Bean
     public ConnectionFactory connectionFactory() {
-        CachingConnectionFactory cachingConnectionFactory = new CachingConnectionFactory(LOCALHOST);
+        CachingConnectionFactory cachingConnectionFactory = new CachingConnectionFactory(localhost);
         cachingConnectionFactory.setUsername(username);
         cachingConnectionFactory.setPassword(password);
         return cachingConnectionFactory;
@@ -38,6 +38,6 @@ public class RabbitConfig {
 
     @Bean
     public Queue commonMonitoring() {
-        return new Queue(COMMON_MONITORING_QUEUE);
+        return new Queue(queue);
     }
 }
