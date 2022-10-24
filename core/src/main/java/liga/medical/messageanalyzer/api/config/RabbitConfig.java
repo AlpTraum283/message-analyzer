@@ -12,16 +12,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
     @Value("${spring.rabbitmq.host}")
-    private static String LOCALHOST;
+    private String LOCALHOST;
 
     @Value("${spring.rabbitmq.queue}")
-    private static String COMMON_MONITORING_QUEUE;
+    private String COMMON_MONITORING_QUEUE;
 
     @Value("${spring.rabbitmq.username}")
-    private static String username;
+    private String username;
 
     @Value("${spring.rabbitmq.password}")
-    private static String password;
+    private String password;
 
     @Bean
     public ConnectionFactory connectionFactory() {
